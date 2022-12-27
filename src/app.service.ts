@@ -2,7 +2,12 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'i am Home route';
+
+  loginPage(){
+    return "i am login page";
+  }
+
+  login(){
+    return "i am login";
   }
 }

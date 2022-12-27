@@ -6,6 +6,8 @@ import { users } from './users/entity/users.entity';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
 import { admin } from './admin/entity/admin.entity';
+import { QuestionsModule } from './questions/questions.module';
+import { questions } from './questions/entity/questions.entity';
 
 @Module({
   imports: [UsersModule, AdminModule, TypeOrmModule.forRoot({
@@ -15,9 +17,9 @@ import { admin } from './admin/entity/admin.entity';
     username: 'root',
     password: 'password',
     database: 'coding_platform',
-    entities: [users, admin],
+    entities: [users, admin, questions],
     synchronize: true,
-  }), AdminModule,],
+  }), AdminModule, QuestionsModule,],
   controllers: [AppController],
   providers: [AppService],
 })

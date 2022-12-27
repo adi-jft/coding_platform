@@ -19,4 +19,10 @@ export class users{
 
     @Column()
     role: string;
+
+    @Column()
+    testcode: number;
+
+    @Column()
+    showscore: number;
 }

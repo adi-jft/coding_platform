@@ -6,8 +6,8 @@ import { adminDto } from './dto/admin.dto';
 export class AdminController {
     constructor(private adminServive: AdminService){}
 
-    @Post("/checkadmin")
-    check(@Body() admin: adminDto){
+    @Post("/checkAdmin")
+    checkAdmin(@Body() admin: adminDto){
         return this.adminServive.findByEmail(admin.email);
     }
 }
